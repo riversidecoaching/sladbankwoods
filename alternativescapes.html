@@ -19,14 +19,44 @@
   background-color: #ddd;
   color: black;
 }
+h1 {
+  text-align: center;
+}
 </style>
 </head>
 <body>
 
-<h2>Time machine</h2>
+<h1>Time machine</h2>
 
-<a href="60.html" button class="block">60 years ago</button>
-<a href="seascape.html" button class="block">Ancient Seascape</button>
+<button onclick="landscape60()" class="block">60 years ago</button>
+<button onclick="landscapeSea()" class="block">Ancient Seascape</button>
 
+<p id="land60"></p>
+<p id="landSea"></p>
+
+<script>
+function landscape60() {
+  var txt;
+  if (confirm("Rotate to landscape view, then press OK")) {
+    txt = "Thanks!";
+    window.open("landscape60.html");
+  } else {
+    txt = "The following link needs the portrait view, try again";
+  }
+  document.getElementById("land60").innerHTML = txt;
+}
+function landscapeSea() {
+  var txt;
+  if (confirm("Rotate to landscape view, then press OK")) {
+    txt = "Thanks!";
+    window.open("landscapeSea.html");
+  } else {
+    txt = "The following link needs the portrait view, try again";
+  }
+  document.getElementById("landSea").innerHTML = txt;
+}
+</script>
+
+  
 </body>
 </html>
